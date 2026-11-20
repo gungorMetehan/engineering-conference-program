@@ -1,0 +1,1 @@
+A responsive, bilingual (TR/EN) engineering conference program with three-day navigation, four parallel halls, inline abstracts, search, and print support. Built with standalone HTML, CSS, and JavaScript.
