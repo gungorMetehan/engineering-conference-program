@@ -1,8 +1,6 @@
 # Engineering Conference Program
 
-Üç günlük mühendislik konferansları için Türkçe ve İngilizce kullanılabilen, mobil uyumlu bir program arayüzü. Dört paralel salonun oturumları aynı tabloda görüntülenir; bildiri başlıklarına tıklanarak özetler açılır.
-
-Uygulama tek bir `index.html` dosyasıyla çalışır. Kurulum, paket yöneticisi, veritabanı veya sunucu uygulaması gerektirmez.
+Üç günlük bir mühendislik konferansu için Türkçe ve İngilizce kullanılabilen, mobil uyumlu bir program arayüzü tasarımı. Tasarımda, üç farklı gün ve dört paralel salon oturumu görüntülenebilmekte, bildirilerin üzerine tıklanarak detaylarına (özetlerine) erişilebilmektedir. Uygulama tek bir `index.html` dosyasıyla çalışabilmektedir.
 
 ## Önizleme
 
@@ -10,11 +8,9 @@ Uygulama tek bir `index.html` dosyasıyla çalışır. Kurulum, paket yöneticis
 
 ## Kullanım demosu
 
-Animasyon; 1., 2. ve 3. gün arasında geçişi, bildiri özetinin açılıp kapanmasını ve İngilizce görünümü gösterir.
+Animasyon; günler arasındaki geçişleri, bildiri özetinin açılıp kapanmasını ve sayfanın İngilizce görünümünü göstermektedir.
 
 ![Gün seçimi ve bildiri özetlerinin açılması](assets/demo.gif)
-
-README üzerindeki GIF bir tanıtım kaydıdır. Kontrolleri kendiniz kullanmak için `index.html` dosyasını tarayıcıda açın veya uygulamayı GitHub Pages ile yayımlayın.
 
 ## Özellikler
 
@@ -32,25 +28,10 @@ README üzerindeki GIF bir tanıtım kaydıdır. Kontrolleri kendiniz kullanmak 
 
 1. Repoyu indirin veya klonlayın.
 2. `index.html` dosyasını Chrome, Edge, Firefox veya Safari gibi bir tarayıcıyla açın.
-3. İstediğiniz günü ve dili seçin. Özetini okumak için bir bildiri başlığına tıklayın.
-
-Arama ve yazdırma JavaScript ile geliştirilmiş özelliklerdir. Dosya önizleme uygulamalarının sunduğu etkileşimler, tam tarayıcı kullanımından farklı olabilir. Fiziksel iPhone cihazında doğrulama yapılmamıştır.
-
-## GitHub Pages ile yayımlama
-
-1. Repo köküne `index.html`, `README.md`, `assets` ve `tools` klasörlerini yükleyin.
-2. Repo içinde **Settings → Pages** bölümünü açın.
-3. **Source** alanında **Deploy from a branch** seçin.
-4. Dal olarak **main**, klasör olarak **/ (root)** seçip **Save** düğmesine basın.
-5. Yayın tamamlandığında Pages ekranında verilen adresi paylaşın.
-
-README görselleri `assets` klasörüne göreli yollarla bağlanır. Bu klasörü README ile birlikte yükleyin. ZIP dosyasını tek başına repoya yüklemek yerine içeriğini çıkarıp dosyaları yükleyin.
-
-Resmî yönerge: [GitHub Pages yayın kaynağını yapılandırma](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
 
 ## Bildirileri düzenleme
 
-VS Code’da `index.html` dosyasını açıp **BİLDİRİLERİ BURADAN DÜZENLEYİN** ifadesini arayın. `program-data` bölümündeki her bildiri ayrı bir kayıttır:
+VS Code’da `index.html` dosyasını açıp **BİLDİRİLERİ BURADAN DÜZENLEYİN** ifadesini arattırın. `program-data` bölümündeki her bildiri ayrı bir kayıttır ve şu şekilde tasarlanmıştır:
 
 ```json
 {
@@ -68,7 +49,7 @@ VS Code’da `index.html` dosyasını açıp **BİLDİRİLERİ BURADAN DÜZENLEY
 }
 ```
 
-Bu örnek ilgili alanları gösterir; mevcut kaydı düzenlerken diğer alanları ve JSON yapısını koruyun. Metin içindeki çift tırnakları `\"` olarak yazın. Her özet en fazla 200 kelime olmalıdır.
+Bu örnek ilgili alanları gösterir; mevcut kaydı düzenlerken diğer alanları ve JSON yapısını koruyun. Metin içindeki çift tırnakları `\"` olarak yazın.
 
 Normal tarayıcı kullanımında program verileri açılışta yeniden işlenir. JavaScript çalıştırmayan görüntüleyiciler için dosyanın içinde ayrıca hazır tablolar bulunur. Veri değişikliklerinden sonra bu tabloları da güncellemek için repo klasöründe çalıştırın:
 
@@ -103,6 +84,6 @@ Yardımcı betik Python 3.9 veya üzerini ve yalnızca standart kütüphaneyi ku
 
 ## Teknoloji ve örnek içerik
 
-HTML, CSS ve JavaScript kullanılmıştır. Başlıklarda Bricolage Grotesque, metinlerde Figtree kullanılır; font lisans metinleri HTML içinde bulunur.
+HTML, CSS ve JavaScript kullanılmıştır. Başlıklarda Bricolage Grotesque, metinlerde Figtree tercih edilmiştir; font lisans metinleri HTML içinde mevcuttur.
 
-Bildiri başlıkları, yazar isimleri ve özetler arayüzü göstermek için oluşturulmuş örnek içeriklerdir. Gerçek bir konferans programını veya tamamlanmış araştırma sonuçlarını temsil etmez. İletişim adresi `program@example.com` örnek adresidir.
+Bildiri başlıkları, yazar isimleri ve özetler arayüzü göstermek için oluşturulmuş örnek içeriklerdir. Gerçek bir konferans programını veya tamamlanmış araştırma sonuçlarını temsil etmez. Örneğin iletişim adresi `program@example.com` örnek bir adrestir. Aynı şekilde bildiriler ve özetleri de yine YZ tarafından oluşturulmuştur. Üç günlük bir konferans tasarımı bu HTML aracılığı ile örneklendirilmeye çalışılmıştır.
